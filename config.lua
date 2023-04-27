@@ -1,14 +1,18 @@
 
 Config = {}
-Config.ScriptName = GetCurrentResourceName() 
+Config.ScriptName = GetCurrentResourceName()
+    -- TODO
+    -- CAMERA FACE NPC
+    -- NPC ANIMATION
 
--- TODO
--- CAMERA FACE NPC
--- NPC ANIMATION
-
---menu position
--- "center" / "top-left" / "top-right"
+    --menu position
+    -- "center" / "top-left" / "top-right"
 Config.Align = "top-left"
+
+Config.defaultlang = "en_lang"
+
+       -- open stores
+Config.Key = 0x760A9C6F --[G]
 
 --Webhook Section, description is in translation
 Config.UseWebhook = false -- Use webhook
@@ -23,12 +27,6 @@ Config.WebhookName = ""
 Config.WebhookLogo = ""
 Config.WebhookLogo2 = ""
 Config.WebhookAvatar = ""
-
-Config.defaultlang = "en_lang"
-
--- open stores
-Config.Key = 0x760A9C6F --[G]
-
 
     --- STORES ---
 
@@ -58,6 +56,7 @@ Config.Stores = {
     }, 
 }
 
+
 -----------------------------------------------------------------------------
 -------------------------------------ITEMS-----------------------------------
 -----------------------------------------------------------------------------
@@ -71,6 +70,9 @@ Config.Stores = {
 
 BlackSmith_ShopItems_SELL = {         
        -- Tools
+    { itemLabel = "Plant Trimmer", itemName = "planttrimmer", currencyType = "cash", sellprice = 5, randomprice = math.random(30, 55), desc = "Sell Plant Trimmers", category = "Tools" },
+    { itemLabel = "Garden Hoe", itemName = "hoe", currencyType = "cash", sellprice = 5, randomprice = math.random(30, 55), desc = "Sell a Garden Hoe", category = "Tools" },
+    { itemLabel = "Empty Watering Can", itemName = "wateringcan_empty", currencyType = "cash", sellprice = 2, randomprice = math.random(30, 55), desc = "Sell a Garden Hoe", category = "Tools" },
     { itemLabel = "Pickaxe", itemName = "pickaxe", currencyType = "cash", sellprice = 5, randomprice = math.random(30, 55), desc = "Sell a Pickaxe", category = "Tools" },
     { itemLabel = "Hatchet", itemName = "hatchet", currencyType = "cash", sellprice = 5, randomprice = math.random(30, 55), desc = "Sell a Garden Hoe", category = "Tools" }       
 } 
@@ -78,11 +80,40 @@ BlackSmith_ShopItems_SELL = {
 -----------------------------------------------------------------------------
 --------------------------------------SELL ITEMS ----------------------------
 -----------------------------------------------------------------------------
-Config.SellItems = {       
+Config.SellItems = {      
+    -----------------------------------------------------------------------------
+    --------------------------------------Armadillo------------------------------
+    ----------------------------------------------------------------------------- 
+        ArmadilloBlacksmith = BlackSmith_ShopItems_SELL, 
+    -----------------------------------------------------------------------------
+    --------------------------------------Blackwater------------------------------
+    -----------------------------------------------------------------------------    
+        BlackwaterBlacksmith = BlackSmith_ShopItems_SELL, 
+    -----------------------------------------------------------------------------
+    --------------------------------------Rhodes---------------------------------
+    -----------------------------------------------------------------------------        
+        RhodesBlacksmith = BlackSmith_ShopItems_SELL, 
+    -----------------------------------------------------------------------------
+    --------------------------------------St-Denis-------------------------------
+    -----------------------------------------------------------------------------      
+        StDenisBlacksmith = BlackSmith_ShopItems_SELL, 
+    -----------------------------------------------------------------------------
+    --------------------------------------Strawberry-----------------------------
+    -----------------------------------------------------------------------------      
+        StrawbBlacksmith = BlackSmith_ShopItems_SELL, 
+    -----------------------------------------------------------------------------
+    --------------------------------------Tumbleweed-----------------------------
+    -----------------------------------------------------------------------------       
+        TumbleBlacksmith = BlackSmith_ShopItems_SELL, 
     -----------------------------------------------------------------------------
     --------------------------------------Valentine------------------------------
     -----------------------------------------------------------------------------        
-        ValBlacksmith = BlackSmith_ShopItems_SELL,  
+        ValBlacksmith = BlackSmith_ShopItems_SELL, 
+    -----------------------------------------------------------------------------
+    --------------------------------------Vanhorn--------------------------------
+    -----------------------------------------------------------------------------    
+        VanBlacksmith = BlackSmith_ShopItems_SELL, 
+    ----------------------------------------------------------------------------- 
 }
 -----------------------------------------------------------------------------
 -------------------------------------ITEMS-----------------------------------
@@ -96,34 +127,47 @@ Config.SellItems = {
     -- category = where the item will be displayed at
     BlackSmith_ShopItems_BUY = {
             -- Tools
-           { itemLabel = "Pickaxe", itemName = "pickaxe", currencyType = "cash", buyprice = 20, randomprice = math.random(30, 55), desc = "Buy a Pickaxe", category = "Tools" },
+            { itemLabel = "Plant Trimmer", itemName = "planttrimmer", currencyType = "cash", buyprice = 20, randomprice = math.random(30, 55), desc = "Buy Plant Trimmers", category = "Tools" },
+            { itemLabel = "Garden Hoe", itemName = "hoe", currencyType = "cash", buyprice = 20, randomprice = math.random(30, 55), desc = "Buy a Garden Hoe", category = "Tools" },
+            { itemLabel = "Empty Watering Can", itemName = "wateringcan_empty", currencyType = "cash", buyprice = 2, randomprice = math.random(30, 55), desc = "Buy a Garden Hoe", category = "Tools" },
+            { itemLabel = "Pickaxe", itemName = "pickaxe", currencyType = "cash", buyprice = 20, randomprice = math.random(30, 55), desc = "Buy a Pickaxe", category = "Tools" },
             { itemLabel = "Hatchet", itemName = "hatchet", currencyType = "cash", buyprice = 20, randomprice = math.random(30, 55), desc = "Buy a Garden Hoe", category = "Tools" }            
      }
 -----------------------------------------------------------------------------
 --------------------------------------BUY ITEMS ----------------------------
 -----------------------------------------------------------------------------
-Config.BuyItems = {     
+Config.BuyItems = {    
+    -----------------------------------------------------------------------------
+    --------------------------------------Armadillo- ----------------------------
+    -----------------------------------------------------------------------------
+        ArmadilloBlacksmith = BlackSmith_ShopItems_BUY, 
+    -----------------------------------------------------------------------------
+    --------------------------------------Blackwater------------------------------
+    -----------------------------------------------------------------------------  
+        BlackwaterBlacksmith = BlackSmith_ShopItems_BUY,
+    -----------------------------------------------------------------------------
+    --------------------------------------Rhodes---------------------------------
+    -----------------------------------------------------------------------------     
+        RhodesBlacksmith = BlackSmith_ShopItems_BUY,
+    -----------------------------------------------------------------------------
+    --------------------------------------St-Denis-------------------------------
+    -----------------------------------------------------------------------------         
+        StDenisBlacksmith  = BlackSmith_ShopItems_BUY, 
+    -----------------------------------------------------------------------------
+    --------------------------------------Strawberry-----------------------------
+    -----------------------------------------------------------------------------      
+        StrawbBlacksmith = BlackSmith_ShopItems_BUY, 
+    -----------------------------------------------------------------------------
+    --------------------------------------Tumbleweed-----------------------------
+    -----------------------------------------------------------------------------      
+        TumbleBlacksmith = BlackSmith_ShopItems_BUY, 
     -----------------------------------------------------------------------------
     --------------------------------------Valentine------------------------------
     -----------------------------------------------------------------------------       
-        ValBlacksmith = BlackSmith_ShopItems_BUY, 
+        ValBlacksmith = BlackSmith_ShopItems_BUY,
+    -----------------------------------------------------------------------------
+    --------------------------------------Vanhorn--------------------------------
+    -----------------------------------------------------------------------------        
+        VanBlacksmith = BlackSmith_ShopItems_BUY,
+    -----------------------------------------------------------------------------      
 }
-
---- Want the pre configured data for the stores? 
---- Little Creek -- Admin an dConcept Owner of Little Creek, Tillie 
-------- has put together an amazing set of stores and items.
-
---- Purchase her configuration files for vorp_stores at our website.
---- https://craftedbylittledragons.net/vorp-store-configuration-files-by-tillie-little-creek/
-
---- The config file for this specific store.
---- https://craftedbylittledragons.net/product/vorp_store_blacksmith-config-lua/
-
---- The related crafting files.
---- https://craftedbylittledragons.net/product/vorp_crafting_blacksmith-config-lua/
-
---- All crafting files. 
---- https://craftedbylittledragons.net/vorp-crafting-configuration-files-by-tillie-little-creek/
-
---- Bundles are available here:
---- https://craftedbylittledragons.net/vorp-configuration-files-bundles-by-tillie-little-creek/
