@@ -5,9 +5,9 @@ description 'Vorp Stores Blacksmith, AI store, Buy and Sell, Locations, Items'
 author 'VORP @outsider31000 MOD by Crafted by Little Dragons'
 lua54 'yes'
 
-client_scripts { 'client/client.lua' }
+client_scripts { 'client/*.lua' }
 
-server_scripts { 'server/server.lua' }
+server_scripts { 'server/*.lua' }
 
 shared_scripts {
     'config.lua',
