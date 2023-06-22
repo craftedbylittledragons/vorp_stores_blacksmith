@@ -88,11 +88,11 @@ Config.Stores = {
 
 BlackSmith_ShopItems_SELL = {         
        -- Tools
-    { itemLabel = "Plant Trimmer", itemName = "planttrimmer", currencyType = "cash", sellprice = 5, randomprice = math.random(30, 55), desc = "Sell Plant Trimmers", category = "Tools" },
-    { itemLabel = "Garden Hoe", itemName = "hoe", currencyType = "cash", sellprice = 5, randomprice = math.random(30, 55), desc = "Sell a Garden Hoe", category = "Tools" },
-    { itemLabel = "Empty Watering Can", itemName = "wateringcan_empty", currencyType = "cash", sellprice = 2, randomprice = math.random(30, 55), desc = "Sell a Garden Hoe", category = "Tools" },
-    { itemLabel = "Pickaxe", itemName = "pickaxe", currencyType = "cash", sellprice = 5, randomprice = math.random(30, 55), desc = "Sell a Pickaxe", category = "Tools" },
-    { itemLabel = "Hatchet", itemName = "hatchet", currencyType = "cash", sellprice = 5, randomprice = math.random(30, 55), desc = "Sell a Garden Hoe", category = "Tools" }       
+    { itemLabel = "Plant Trimmer", itemName = "planttrimmer", currencyType = "cash", item_price = 5, randomprice = math.random(30, 55), desc = "Sell Plant Trimmers", category = "Tools" },
+    { itemLabel = "Garden Hoe", itemName = "hoe", currencyType = "cash", item_price = 5, randomprice = math.random(30, 55), desc = "Sell a Garden Hoe", category = "Tools" },
+    { itemLabel = "Empty Watering Can", itemName = "wateringcan_empty", currencyType = "cash", item_price = 2, randomprice = math.random(30, 55), desc = "Sell a Garden Hoe", category = "Tools" },
+    { itemLabel = "Pickaxe", itemName = "pickaxe", currencyType = "cash", item_price = 5, randomprice = math.random(30, 55), desc = "Sell a Pickaxe", category = "Tools" },
+    { itemLabel = "Hatchet", itemName = "hatchet", currencyType = "cash", item_price = 5, randomprice = math.random(30, 55), desc = "Sell a Garden Hoe", category = "Tools" }       
 } 
 
 -----------------------------------------------------------------------------
@@ -145,11 +145,11 @@ Config.SellItems = {
     -- category = where the item will be displayed at
     BlackSmith_ShopItems_BUY = {
             -- Tools
-            { itemLabel = "Plant Trimmer", itemName = "planttrimmer", currencyType = "cash", buyprice = 20, randomprice = math.random(30, 55), desc = "Buy Plant Trimmers", category = "Tools" },
-            { itemLabel = "Garden Hoe", itemName = "hoe", currencyType = "cash", buyprice = 20, randomprice = math.random(30, 55), desc = "Buy a Garden Hoe", category = "Tools" },
-            { itemLabel = "Empty Watering Can", itemName = "wateringcan_empty", currencyType = "cash", buyprice = 2, randomprice = math.random(30, 55), desc = "Buy a Garden Hoe", category = "Tools" },
-            { itemLabel = "Pickaxe", itemName = "pickaxe", currencyType = "cash", buyprice = 20, randomprice = math.random(30, 55), desc = "Buy a Pickaxe", category = "Tools" },
-            { itemLabel = "Hatchet", itemName = "hatchet", currencyType = "cash", buyprice = 20, randomprice = math.random(30, 55), desc = "Buy a Garden Hoe", category = "Tools" }            
+            { itemLabel = "Plant Trimmer", itemName = "planttrimmer", currencyType = "cash", item_price = 20, randomprice = math.random(30, 55), desc = "Buy Plant Trimmers", category = "Tools" },
+            { itemLabel = "Garden Hoe", itemName = "hoe", currencyType = "cash", item_price = 20, randomprice = math.random(30, 55), desc = "Buy a Garden Hoe", category = "Tools" },
+            { itemLabel = "Empty Watering Can", itemName = "wateringcan_empty", currencyType = "cash", item_price = 2, randomprice = math.random(30, 55), desc = "Buy a Garden Hoe", category = "Tools" },
+            { itemLabel = "Pickaxe", itemName = "pickaxe", currencyType = "cash", item_price = 20, randomprice = math.random(30, 55), desc = "Buy a Pickaxe", category = "Tools" },
+            { itemLabel = "Hatchet", itemName = "hatchet", currencyType = "cash", item_price = 20, randomprice = math.random(30, 55), desc = "Buy a Garden Hoe", category = "Tools" }            
      }
 -----------------------------------------------------------------------------
 --------------------------------------BUY ITEMS ----------------------------
